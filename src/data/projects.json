@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "gptree",
+    "name": "GPTree",
+    "description": "Split your Chat GPT contexts in node tree contexts instead of new chats.",
+    "image": "/gptree.png",
+    "tags": ["Typescript", "NextJS", "OpenAI"],
+    "year": "2023"
+  },
+  {
+    "slug": "neosaland",
+    "name": "Neosaland",
+    "description": "Developed a guessing game's control panel for Neosaldina (a big medicine company in brazil). It was used at the CCXP event as a marketing activation at the company's booth where a host controlled the games and visitors played.",
+    "image": "https://user-images.githubusercontent.com/16678782/204093802-fc95c054-d151-4d5b-bfd9-c0bcf757b400.gif",
+    "tags": ["Typescript", "NextJS", "OpenAI"],
+    "year": "2022"
+  },
+  {
+    "slug": "event-companion",
+    "name": "Event Companion",
+    "description": "My college graduation final project. An app, for big events like Lolapalooza, focused on helping customers to find friends and places and also helping companies to have more control over their marketing activations.",
+    "image": "",
+    "tags": ["NextJS", "React", "NodeJS", "Postgres"],
+    "year": "2022"
+  },
+  {
+    "slug": "mswebmaker",
+    "name": "MSWebmaker",
+    "description": "Designed the UI & developed a website for a digital marketing company I joined some time later.",
+    "image": "/mswebmaker.png",
+    "tags": ["Javascript", "HTML", "CSS", "Bootstrap", "JQuery"],
+    "year": "2020"
+  },
+  {
+    "slug": "tech-run",
+    "name": "Tech Run",
+    "description": "Web game developed for an event at my college. At the event there were some totems with tablets for people to play.",
+    "image": "/tech-run.png",
+    "tags": ["Javascript", "HTML", "CSS", "Phaser.js"],
+    "year": "2019"
+  },
+  {
+    "slug": "pirate-curse",
+    "name": "Pirate Curse",
+    "description": "The first web project I did in college. An infinite runner type game where you need to survive as long as you can.",
+    "image": "/pirate-curse.png",
+    "tags": ["Javascript", "HTML", "CSS", "Phaser.js"],
+    "year": "2018"
+  }
+]
