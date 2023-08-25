@@ -4,12 +4,12 @@ import { ProjectSlider } from '~/components/ProjectSlider';
 ---
 
 <Layout title="Rafael Pignataro">
-  <section class="flex items-start flex-col py-16 gap-2">
+  <section class="flex items-start flex-col pt-24 pb-32 gap-2">
     <p class="font-semibold text-muted-foreground">
       Hi, I'm Rafael Pignataro
       <span class="text-xl ml-1">👋</span>
     </p>
-    <h2 class="text-xl leading-relaxed text-justify">
+    <h2 class="text-lg leading-relaxed text-justify">
       I'm a <span class="font-semibold underline">Fullstack Web Developer</span> 
       focused in delivering great experiences. I have a solid experience building 
       web applications with great <span class="font-semibold underline">performance</span>
@@ -17,7 +17,7 @@ import { ProjectSlider } from '~/components/ProjectSlider';
     </h2>
   </section>
   <section class="flex flex-col gap-2 max-md:overflow-x-hidden">
-    <h2 class="text-3xl font-semibold">
+    <h2 class="text-xl font-semibold">
       Projects
     </h2>
     <h3 class="text-muted-foreground">
@@ -25,6 +25,54 @@ import { ProjectSlider } from '~/components/ProjectSlider';
     </h3>
     <div class="flex flex-col w-full gap-4 py-4">
       <ProjectSlider client:load />
+    </div>
+  </section>
+  <section class="flex flex-col gap-6 max-md:overflow-x-hidden py-20">
+    <div class="flex flex-col gap-2">
+      <h2 class="text-xl font-semibold">
+        Career
+      </h2>
+      <h3 class="text-muted-foreground">
+        My career path in the last 4 years
+      </h3>
+    </div>
+    <div class="flex flex-col w-full gap-10 py-4">
+      <div class="flex flex-col gap-2">
+        <h3 class="font-semibold tracking-widest">Fullstack Developer</h3>
+        <div class="flex items-center gap-2 text-muted-foreground text-sm">
+          <a href="https://6place.com.br" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-primary transition-all">
+            6place
+          </a>
+          <span>•</span>
+          <span >São Paulo, Brazil</span>
+          <span>•</span>
+          <span >Jan 2022 - Now</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="font-semibold tracking-widest">Fullstack Developer</h3>
+        <div class="flex items-center gap-2 text-muted-foreground text-sm">
+          <a href="https://singu.com.br" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-primary transition-all">
+            Singu
+          </a>
+          <span>•</span>
+          <span >São Paulo, Brazil</span>
+          <span>•</span>
+          <span >Jan 2021 - Dec 2021</span>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="font-semibold tracking-widest">Fullstack Developer</h3>
+        <div class="flex items-center gap-2 text-muted-foreground text-sm">
+          <a href="https://mswebmaker.com.br" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-primary transition-all">
+            MSWebmaker
+          </a>
+          <span>•</span>
+          <span >Miami, Florida (Remote)</span>
+          <span>•</span>
+          <span >Jan 2020 - Dec 2021</span>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
