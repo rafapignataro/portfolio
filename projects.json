@@ -1,5 +1,21 @@
 [
   {
+    "slug": "centro-salutares",
+    "name": "Centro Salutares",
+    "description": "Landing page built for a local space focused on health-oriented practices such as Pilates, yoga, massages, therapy and much more.",
+    "image": "/centro-salutares.png",
+    "tags": ["Typescript", "Remix", "Tailwind"],
+    "year": "2023"
+  },
+  {
+    "slug": "biowell",
+    "name": "Biowell",
+    "description": "Landing page & e-commerce built for a medicine tech company",
+    "image": "/biowell.png",
+    "tags": ["Typescript", "NextJS", "ChakraUI", "Hygraph CMS"],
+    "year": "2023"
+  },
+  {
     "slug": "gptree",
     "name": "GPTree",
     "description": "Split your Chat GPT contexts in node tree contexts instead of new chats.",

@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
-import projects from '~/data/projects.json';
+import projects from '~/../projects.json';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
