@@ -9,7 +9,4 @@ export default defineConfig({
     tailwind({ applyBaseStyles: false, }), 
     react()
   ],
-  experimental: {
-    viewTransitions: true
-   }
 });
