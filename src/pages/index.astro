@@ -1,7 +1,10 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-import { ProjectSlider } from '~/components/ProjectSlider';
+import projects from '~/../projects.json';
 ---
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
 
 <Layout title="Rafael Pignataro">
   <section class="flex items-start flex-col pt-24 pb-32 gap-2">
@@ -24,10 +27,44 @@ import { ProjectSlider } from '~/components/ProjectSlider';
       Projects for clients, for college or even side projects that marked my trajectory in software development.
     </h3>
     <div class="flex flex-col w-full gap-4 py-4">
-      <ProjectSlider client:load />
+      <div class="swiper w-full !overflow-visible">
+        <div class="swiper-wrapper ">
+          {projects.map(project => (
+            <div class="swiper-slide rounded-md pb-6">
+              <div class="group !flex flex-col gap-5 text-muted-foreground hover:text-card-foreground hover:cursor-grab w-full md:w-[400px]">
+                <div class="bg-zinc-700 w-full aspect-video rounded-lg overflow-hidden relative">
+                  {project.image && <img 
+                    src={project.image} 
+                    alt={`Cover image of ${project.name}`} 
+                    class="h-full w-full object-fit"
+                    width={400}
+                    height={250}
+                  />}
+                  <div class="opacity-100 group-hover:opacity-0 absolute top-0 left-0 w-full h-full bg-zinc-900/50 transition-opacity duration-700"></div>
+                </div>
+                <div class="flex flex-col flex-1 transition-all duration-1000 gap-2">
+                  <div class="flex items-center gap-2">
+                    {project.tags.map(tag => (
+                      <div class="text-xs">{tag}</div>
+                    ))}
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-semibold tracking-widest">{project.name}</h3>
+                    <span class="text-sm font-semibold">{project.year}</span>
+                  </div>
+                  <p class="text-sm leading-relaxed">{project.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="swiper-scrollbar bg-zinc-900">
+          <div class="swiper-scrollbar-drag bg-zinc-300"></div>
+        </div>
+      </div>
     </div>
   </section>
-  <section class="flex flex-col gap-8 max-md:overflow-x-hidden py-20">
+  <section class="flex flex-col gap-8 max-md:overflow-x-hidden py-10 md:py-20">
     <div class="flex flex-col gap-2">
       <h2 class="text-xl font-semibold">
         Career
@@ -44,7 +81,7 @@ import { ProjectSlider } from '~/components/ProjectSlider';
             <a href="https://6place.com.br" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-primary transition-all">
               6place
             </a>
-            <span>•</span>
+            <span>-</span>
             <span>São Paulo, Brazil (Remote)</span>
           </div>
           <span>Jan 2022 - Now</span>
@@ -57,7 +94,7 @@ import { ProjectSlider } from '~/components/ProjectSlider';
             <a href="https://singu.com.br" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-primary transition-all">
               Singu
             </a>
-            <span>•</span>
+            <span>-</span>
             <span>São Paulo, Brazil (Hybrid)</span>
           </div>
           <span>Jan 2021 - Dec 2021</span>
@@ -70,7 +107,7 @@ import { ProjectSlider } from '~/components/ProjectSlider';
             <a href="https://mswebmaker.com" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-primary transition-all">
               MSWebmaker
             </a>
-            <span>•</span>
+            <span>-</span>
             <span>Miami, Florida (Remote)</span>
           </div>
           <span>Jan 2020 - Dec 2021</span>
@@ -83,7 +120,7 @@ import { ProjectSlider } from '~/components/ProjectSlider';
             <p class="underline underline-offset-4 hover:text-primary transition-all">
               Freelancer
             </p>
-            <span>•</span>
+            <span>-</span>
             <span>São Paulo, Brazil</span>
           </div>
           <span>2019</span>
@@ -92,3 +129,23 @@ import { ProjectSlider } from '~/components/ProjectSlider';
     </div>
   </section>
 </Layout>
+
+<script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs'
+
+  new Swiper('.swiper', {
+    slidesPerView: 1, 
+    spaceBetween: 30,
+    freeMode: true,
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+      },
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      hide: false
+    },
+  });
+</script>

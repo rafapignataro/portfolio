@@ -1,5 +1,5 @@
 --- 
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { FileText, Github, Linkedin, Mail } from 'lucide-react';
 import '../tailwind.css';
 
 interface Props {
@@ -14,7 +14,8 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="About Rafael Pignataro">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -30,15 +31,18 @@ const { title } = Astro.props;
         <a href="/" class="">
           <h1 class="text-2xl font-semibold leading-tight hover:underline">Rafael Pignataro</h1>
         </a>
-        <div class="flex items-center gap-5  ">
-          <a href="https://github.com/rafapignataro" target="_blank" class="py-4 hover:scale-110 transition-all duration-250">
+        <div class="flex items-center gap-5">
+          <a href="https://github.com/rafapignataro" target="_blank" class="py-4 hover:scale-110 transition-all duration-250" title="Github">
             <Github />
           </a>
-          <a href="https://github.com/rafapignataro" target="_blank" class="py-4 hover:scale-110 transition-all duration-250">
+          <a href="https://www.linkedin.com/in/rafael-pignataro" target="_blank" class="py-4 hover:scale-110 transition-all duration-250" title="Linkedin">
             <Linkedin />
           </a>
-          <a href="mailto:rafapignataro@gmail.com" class="py-4 hover:scale-110 transition-all duration-250">
+          <a href="mailto:rafapignataro@gmail.com" class="py-4 hover:scale-110 transition-all duration-250" title="E-mail">
             <Mail />
+          </a>
+          <a href="https://rafapignataro.notion.site/Rafael-Mira-Pignataro-d9bc9fd56f0444ce811a54e81e35109d" target="_blank" class="py-4 hover:scale-110 transition-all duration-250" title="Resume">
+            <FileText />
           </a>
         </div>
       </div>
@@ -57,14 +61,17 @@ const { title } = Astro.props;
           </h3>
         </div>
         <div class="flex items-center gap-5 flex-1">
-          <a href="https://github.com/rafapignataro" target="_blank" class="py-4 hover:scale-110">
+          <a href="https://github.com/rafapignataro" target="_blank" class="py-4 hover:scale-110 transition-all duration-250" title="Github">
             <Github />
           </a>
-          <a href="https://github.com/rafapignataro" target="_blank" class="py-4 hover:scale-110">
+          <a href="https://www.linkedin.com/in/rafael-pignataro" target="_blank" class="py-4 hover:scale-110 transition-all duration-250" title="Linkedin">
             <Linkedin />
           </a>
-          <a href="mailto:rafapignataro@gmail.com" class="py-4 hover:scale-110">
+          <a href="mailto:rafapignataro@gmail.com" class="py-4 hover:scale-110 transition-all duration-250" title="E-mail">
             <Mail />
+          </a>
+          <a href="https://rafapignataro.notion.site/Rafael-Mira-Pignataro-d9bc9fd56f0444ce811a54e81e35109d" target="_blank" class="py-4 hover:scale-110 transition-all duration-250" title="Resume">
+            <FileText />
           </a>
         </div>
       </div>
