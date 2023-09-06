@@ -1,6 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '~/layouts/Layout.astro';
 import projects from '~/../projects.json';
+
 ---
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -33,7 +36,7 @@ import projects from '~/../projects.json';
             <div class="swiper-slide rounded-md pb-6">
               <div class="group !flex flex-col gap-5 text-muted-foreground hover:text-card-foreground hover:cursor-grab w-full md:w-[400px]">
                 <div class="bg-zinc-700 w-full aspect-video rounded-lg overflow-hidden relative">
-                  {project.image && <img 
+                  {project.image && <Image 
                     src={project.image} 
                     alt={`Cover image of ${project.name}`} 
                     class="h-full w-full object-fit"
